@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: dubbo_server-spring-boot-starter
+  dubbo:
+    server: true
+    registry:
+      address: zookeeper://192.168.1.103:2181
+    protocol:
+      name: dubbo
+      port: 20880
