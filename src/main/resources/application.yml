@@ -1,10 +1,14 @@
 spring:
   application:
-    name: dubbo_server-spring-boot-starter
-  dubbo:
-    server: true
-    registry:
-      address: zookeeper://192.168.1.103:2181
-    protocol:
-      name: dubbo
-      port: 20880
+    name: dubbo-auto-configuration-provider-demo
+dubbo:
+  registry:
+    address: zookeeper://115.28.234.123:2181?timeout=30000
+    use-as-config-center: false
+  protocol:
+    name: dubbo
+    port: 20880
+  scan:
+    base-packages: com.example.dubbo_server.server.impl
+  config-center:
+    timeout: 20000
